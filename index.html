@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opening Viber…</title>
+</head>
+<body style="font-family:Arial;text-align:center;margin-top:60px">
+  <p>Opening Viber…</p>
+  <p><a id="go" style="background:#7360F2;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none">Open in Viber</a></p>
+  <script>
+    const n = (new URLSearchParams(location.search).get('n') || '').replace(/\D/g, '');
+    const url = 'viber://chat?number=%2B' + n;
+    document.getElementById('go').href = url;
+    if (n) location.href = url;
+  </script>
+</body>
+</html>
